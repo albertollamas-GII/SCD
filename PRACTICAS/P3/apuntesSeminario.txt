@@ -1,0 +1,18 @@
+MPI_Status es un tipo estructura con los metadatos de los mensajes:
+    * status.MPI_SOURCE: proceso fuente.
+    * status.MPI_TAG: etiqueta del mensaje.
+
+Hay 6 funciones básicas en MPI:
+I MPI_Init: inicializa el entorno de ejecución de MPI.
+I MPI_Finalize: finaliza el entorno de ejecución de MPI.
+I MPI_Comm_size: determina el número de procesos de un comunicador.
+I MPI_Comm_rank: determina el identificador del proceso en un comunicador.
+I MPI_Send: operación básica para envío de un mensaje.
+I MPI_Recv: operación básica para recepción de un mensaje.
+
+
+Examen lunes 
+Modificar filosofos para que el cuarto filosofo se levante y se siente pero con otras etiquetas
+En funcion camarero usar el Iprobe hasta que detecte un mensaje de cualquiera o del cuarto filosofo dependiendo de cuantos esten sentados en la mesa
+
+int MPI_Iprobe( int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status );
